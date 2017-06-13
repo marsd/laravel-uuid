@@ -9,25 +9,10 @@
 
 A simple, automatic UUID generator for any model based on Laravel 5.4 , By using this package when each new entry you will get the following :
 
-* Generate `uuid` automatically .
+* Generates `uuid` from Ramsey's UUID v1
+* Reorders the UUID from vend/mysqluuid according to https://www.percona.com/blog/2014/12/19/store-uuid-optimized-way/
 * Assign it to `uuid` field in database automatically.
 * easy find it based `uuid` method.
-
-### What is a UUID?
-
-A universally unique identifier (UUID) is a 128-bit number used to identify information in computer systems. is a 36 character long identifier made up of 32 alphanumeric characters with four hyphens in amongst it.
-For example:`123E4567-E89b-12D3-A456-426655440000` containing letters and numbers. that will uniquely identify something. you can read more [here](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-
-### What are the benefits?
-
-1. With distributed systems you can be pretty confident that the primary key’s will never collide.
-
-2. When building a large scale application when an auto increment primary key is not ideal.
-
-3. It makes replication trivial (as opposed to int’s, which makes it REALLY hard)
-
-4. Safe enough doesn’t show the user that you are getting information by id, for example `https://example.com/user/25/settings`
-
 
 
 ## Installation
@@ -58,14 +43,14 @@ Finally, you'll also need to add the ServiceProvider in `config/app.php`
 ``` php
 'providers' => [
    ...
-   Emadadly\LaravelUuid\LaravelUuidServiceProvider::class,
+   marsd\Uuid\LaravelUuidServiceProvider::class,
 ],
 ```
 
 You could also publish the config file:
 
 ``` bash
-php artisan vendor:publish --provider="Emadadly\LaravelUuid\LaravelUuidServiceProvider"
+php artisan vendor:publish --provider="marsd\Uuid\LaravelUuidServiceProvider"
 ```
 
 and set your default_uuid_column setting, if you have an app-wide default. 
@@ -136,8 +121,6 @@ public function show($uuid)
 }
 ```
 ## Support
-
-If you are having general issues with this package, feel free to contact me on [Twitter](https://twitter.com/emadadly).
 
 If you believe you have found an issue, please report it using the [GitHub issue tracker](https://github.com/EmadAdly/laravel-uuid/issues), or better yet, fork the repository and submit a pull request.
 

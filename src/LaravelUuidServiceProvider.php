@@ -1,6 +1,5 @@
 <?php
-
-namespace Emadadly\LaravelUuid;
+namespace marsd\Uuid;
 
 use Illuminate\Support\ServiceProvider;
 
