@@ -1,5 +1,5 @@
 <?php
-namespace marsd\Uuid;
+namespace Marsd\Uuid;
 
 use MysqlUuid\Formats\ReorderedString;
 use MysqlUuid\Uuid as MysqlUuid;

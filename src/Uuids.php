@@ -1,5 +1,5 @@
 <?php
-namespace marsd\Uuid;
+namespace Marsd\Uuid;
 
 use Emadadly\LaravelUuid\UUIDManager;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
