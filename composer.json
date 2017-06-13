@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Marsd\\Uuid": "src"
+            "Marsd\\Uuid\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Marsd\\Uuid": "tests"
+            "Marsd\\Uuid\\": "tests"
         }
     },
     "scripts": {
